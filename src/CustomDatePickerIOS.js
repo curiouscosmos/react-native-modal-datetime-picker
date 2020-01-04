@@ -63,7 +63,7 @@ export default class CustomDatePickerIOS extends React.PureComponent {
     minuteInterval: this.props.minuteInterval || 1
   };
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     if (this.props.date.valueOf() !== nextProps.date.valueOf()) {
       this.setState({
         date: nextProps.date
